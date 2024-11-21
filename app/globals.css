@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base{
   body{
-    @apply bg-[#F5F6EF] relative after:absolute after:-top-[200px] after:-right-[200px] after:content-[''] after:h-[400px] after:w-[400px] after:-z-50 after:bg-gradient-radial 
+    @apply bg-[#F5F6EF] relative !overflow-x-hidden after:absolute after:-top-[200px] after:-right-[200px] after:content-[''] after:h-[400px] after:w-[400px] after:-z-50 after:bg-gradient-radial 
     after:from-accent/75 after:from-[42%] after:via-accent/15 after:via-70% after:to-white after:to-100% after:rounded-full after:blur-2xl
   }
 }

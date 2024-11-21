@@ -8,7 +8,7 @@ interface Props extends LinkProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
 }
 
-const Navlink: React.FC<Props> = ({ href, ...rest }) => {
+const NavLink: React.FC<Props> = ({ href, ...rest }) => {
   const pathName = usePathname();
 
   const isActive = href === pathName;
@@ -22,4 +22,4 @@ const Navlink: React.FC<Props> = ({ href, ...rest }) => {
   );
 };
 
-export default Navlink;
+export default NavLink;

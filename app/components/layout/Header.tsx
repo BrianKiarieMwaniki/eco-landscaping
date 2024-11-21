@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import Navlink from "../ui/Navlink";
 import Image from "next/image";
+import { useState } from "react";
+import NavLink from "../ui/NavLink";
 
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -31,29 +31,29 @@ const Header = () => {
           }`}
         >
           <li className="py-2 text-center md:py-0">
-            <Navlink href="/" onClick={handleToggle}>
+            <NavLink href="/" onClick={handleToggle}>
               Home
-            </Navlink>
+            </NavLink>
           </li>
           <li className="py-2 text-center md:py-0">
-            <Navlink href="/about" onClick={handleToggle}>
+            <NavLink href="/about" onClick={handleToggle}>
               About
-            </Navlink>
+            </NavLink>
           </li>
           <li className="py-2 text-center md:py-0">
-            <Navlink href="/services" onClick={handleToggle}>
+            <NavLink href="/services" onClick={handleToggle}>
               Services
-            </Navlink>
+            </NavLink>
           </li>
           <li className="py-2 text-center md:py-0">
-            <Navlink href="/portfolio" onClick={handleToggle}>
+            <NavLink href="/portfolio" onClick={handleToggle}>
               Portfolio
-            </Navlink>
+            </NavLink>
           </li>
           <li className="py-2 text-center md:py-0">
-            <Navlink href="/contact" onClick={handleToggle}>
+            <NavLink href="/contact" onClick={handleToggle}>
               Contact
-            </Navlink>
+            </NavLink>
           </li>
         </ul>
       </nav>
