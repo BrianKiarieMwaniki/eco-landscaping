@@ -2,26 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base{
+  body{
+    @apply bg-[#F5F6EF] relative after:absolute after:-top-[200px] after:-right-[200px] after:content-[''] after:h-[400px] after:w-[400px] after:-z-50 after:bg-gradient-radial 
+    after:from-accent/75 after:from-[42%] after:via-accent/15 after:via-70% after:to-white after:to-100% after:rounded-full after:blur-2xl
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .txt-primary {
+    @apply text-7xl font-semibold;
+  }
+
+  .txt-secondary {
+    @apply text-4xl font-semibold;
+  }
+
+  .txt {
+    @apply text-[16px] font-normal;
+  }
+
+  .txt-accent{
+    @apply text-[16px] font-semibold;
+  }
+
+  .extralarge-heading {
+    @apply text-4xl font-semibold;
+  }
+
+  .large-heading {
+    @apply text-[24px] font-semibold;
+  }
+
+  .extralarge-heading-regular {
+    @apply text-4xl font-normal;
+  }
+
+  .large-heading-regular {
+    @apply text-[24px] font-normal;
+  }
+
+  .medium-heading {
+    @apply text-[20px] font-semibold;
+  }
+
+  .medium-heading-regular {
+    @apply text-[20px] font-normal;
+  }
+
+  .small-heading {
+    @apply text-[12px] font-semibold;
+  }
+
+  .small-heading-regular {
+    @apply text-[12px] font-normal;
+  }
+}
+
+@layer components{
+  .navlink{
+    @apply transition-all relative hover:text-accent text-primary font-semibold text-[16px];
+  }
+
+  .navlink.active{
+    @apply text-accent;
+  }
+
+  .menu-icon{
+    @apply relative
+  }
+  .menu-icon, .menu-icon::after, .menu-icon::before{
+    @apply w-[2.2rem] h-[2px] bg-primary inline-block
+  }
+
+  .menu-icon::after, .menu-icon::before{
+    @apply absolute left-0 transition-all duration-[0.2] content-[''];
+    
+  }
+
+  .menu-icon::after{
+    @apply top-[8px]
+  }
+  .menu-icon::before{
+    @apply -top-[8px]
+  }
+
+  .menu-icon.toggled{
+    @apply bg-transparent after:rotate-[135deg] after:top-0 before:-rotate-[135deg] before:top-0
+  }
+
+  
 }
