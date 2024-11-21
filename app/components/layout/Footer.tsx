@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container flex flex-col mx-auto ">
         <div className="flex flex-row w-full space-x-4">
           <div className="flex flex-col   border border-orange-600">
-            <Image src="/Logo.png" alt="logo" width={237} height={17} />
+            <Image src="/images/Logo.png" alt="logo" width={237} height={17} />
             <span className="txt my-5 w-[230px] p-3">
               Best Landscape Design & Maintenance services in the Columbus OH
             </span>

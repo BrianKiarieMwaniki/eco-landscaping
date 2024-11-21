@@ -15,7 +15,7 @@ const Header = () => {
     <header className="p-4 w-full">
       <nav className="mx-auto container flex flex-row justify-between flex-wrap md:flex-nowrap">
         <a href="/" className="flex items-center justify-center">
-          <Image src="/Logo.png" alt="logo" width={277} height={20} />
+          <Image src="/images/Logo.png" alt="logo" width={277} height={20} />
         </a>
         <button
           className="flex md:hidden cursor-pointer justify-center items-center"
