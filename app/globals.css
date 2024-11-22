@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply overflow-x-hidden overflow-y-hidden;
-  }
+ html{
+  @apply !overflow-x-hidden overflow-y-auto;
+ }
 
   body {
-    @apply bg-[#F5F6EF] relative overflow-x-hidden overflow-y-auto;
+    @apply  bg-[#F5F6EF] relative !overflow-x-hidden overflow-y-hidden  flex flex-col;
   }
 
   body::after,
@@ -43,9 +43,11 @@
   }
 
   .extralarge-heading {
-    @apply text-4xl font-semibold;
-  }
+    @apply text-6xl md:text-7xl font-semibold text-primary;
 
+  }
+  
+ 
   .large-heading {
     @apply text-[24px] font-semibold;
   }
@@ -112,4 +114,34 @@
   .footer-navlink{
     @apply text-[16px] font-normal transition-all duration-[0.2s] hover:font-semibold hover:text-darkGreen;
   }
+
+  .btn{
+    @apply relative transition-all duration-[0.2s] inline-block hover:shadow-md hover:-translate-y-[1px] hover:after:scale-x-[1.4] hover:after:scale-y-[1.6] hover:after:opacity-0
+  }
+
+  .btn-primary{
+    @apply bg-accent text-primary txt px-[30px] py-[16px] after:bg-default;
+  }
+
+  .btn::after{
+    @apply content-[''] inline-block h-[100%] w-[100%] absolute top-0 left-0 -z-[1] transition-all duration-[0.4s];
+  }
+
+  .btn-animated{
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
+
+
+ @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
