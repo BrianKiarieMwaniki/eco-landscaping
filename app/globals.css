@@ -27,7 +27,7 @@
 
 @layer utilities {
   .txt-primary {
-    @apply text-7xl font-semibold;
+    @apply text-6xl md:text-7xl font-semibold;
   }
 
   .txt-secondary {
@@ -35,18 +35,16 @@
   }
 
   .txt {
-    @apply text-[16px] font-normal;
+    @apply text-[16px] font-normal text-primary;
   }
 
   .txt-accent {
-    @apply text-[16px] font-semibold;
+    @apply text-[16px] font-semibold text-primary;
   }
 
   .extralarge-heading {
-    @apply text-6xl md:text-7xl font-semibold text-primary;
-
-  }
-  
+    @apply text-4xl  font-semibold text-primary;
+  }  
  
   .large-heading {
     @apply text-[24px] font-semibold;
@@ -61,7 +59,7 @@
   }
 
   .medium-heading {
-    @apply text-[20px] font-semibold;
+    @apply text-[20px] font-semibold text-primary;
   }
 
   .medium-heading-regular {
@@ -69,7 +67,7 @@
   }
 
   .small-heading {
-    @apply text-[12px] font-semibold;
+    @apply text-[12px] font-semibold uppercase text-primary;
   }
 
   .small-heading-regular {
@@ -112,7 +110,7 @@
   }
 
   .footer-navlink{
-    @apply text-[16px] font-normal transition-all duration-[0.2s] hover:font-semibold hover:text-darkGreen;
+    @apply text-[16px] font-normal transition-all duration-[0.2s] hover:font-semibold hover:text-darkGreen text-primary;
   }
 
   .btn{
@@ -130,6 +128,11 @@
   .btn-animated{
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
+  }
+
+  .card{
+    clip-path: polygon(calc(100% - 10px) calc(100% - 0px), 10px calc(100% - 0px), 10px calc(100% - 0px), 8.37794745px calc(100% - 0.13087899999994px), 6.8392256px calc(100% - 0.50979199999989px), 5.40442315px calc(100% - 1.116153px), 4.0941288px calc(100% - 1.929376px), 2.92893125px calc(100% - 2.928875px), 1.9294192px calc(100% - 4.0940639999999px), 1.11618135px calc(100% - 5.404357px), 0.5098064px calc(100% - 6.839168px), 0.13088305px calc(100% - 8.377911px), 1.6555540320986E-31px calc(100% - 10px), 0px 10px, 0px 10px, 0.13088305px 8.37794502px, 0.5098064px 6.83922176px, 1.11618135px 5.40441874px, 1.9294192px 4.09412448px, 2.92893125px 2.9289275px, 4.0941288px 1.92941632px, 5.40442315px 1.11617946px, 6.8392256px 0.50980544px, 8.37794745px 0.13088278px, 10px 1.6555503343131E-31px, calc(100% - 73px) 0px, calc(100% - 73px) 0px, calc(100% - 71.377911px) 0.13088278px, calc(100% - 69.839168px) 0.50980544px, calc(100% - 68.404357px) 1.11617946px, calc(100% - 67.094064px) 1.92941632px, calc(100% - 65.928875px) 2.9289275px, calc(100% - 64.929376px) 4.09412448px, calc(100% - 64.116153px) 5.40441874px, calc(100% - 63.509792px) 6.83922176px, calc(100% - 63.130879px) 8.37794502px, calc(100% - 63px) 10px, calc(100% - 63px) 48px, calc(100% - 63px) 48px, calc(100% - 62.869121px) 49.6220647px, calc(100% - 62.490208px) 51.1607936px, calc(100% - 61.883847px) 52.5955989px, calc(100% - 61.070624px) 53.9058928px, calc(100% - 60.071125px) 55.0710875px, calc(100% - 58.905936px) 56.0705952px, calc(100% - 57.595643px) 56.8838281px, calc(100% - 56.160832px) 57.4901984px, calc(100% - 54.622089px) 57.8691183px, calc(100% - 53px) 58px, calc(100% - 10px) 58px, calc(100% - 10px) 58px, calc(100% - 8.3779109999999px) 58.1308817px, calc(100% - 6.8391679999999px) 58.5098016px, calc(100% - 5.404357px) 59.1161719px, calc(100% - 4.0940639999999px) 59.9294048px, calc(100% - 2.928875px) 60.9289125px, calc(100% - 1.929376px) 62.0941072px, calc(100% - 1.116153px) 63.4044011px, calc(100% - 0.50979199999995px) 64.8392064px, calc(100% - 0.13087899999999px) 66.3779353px, calc(100% - 5.6843418860808E-14px) 68px, calc(100% - 0px) calc(100% - 10px), calc(100% - 0px) calc(100% - 10px), calc(100% - 0.13087899999994px) calc(100% - 8.3779109999999px), calc(100% - 0.50979199999995px) calc(100% - 6.8391679999999px), calc(100% - 1.116153px) calc(100% - 5.4043569999999px), calc(100% - 1.9293759999999px) calc(100% - 4.0940640000001px), calc(100% - 2.928875px) calc(100% - 2.928875px), calc(100% - 4.094064px) calc(100% - 1.9293759999999px), calc(100% - 5.404357px) calc(100% - 1.116153px), calc(100% - 6.839168px) calc(100% - 0.509792px), calc(100% - 8.377911px) calc(100% - 0.13087900000005px), calc(100% - 10px) calc(100% - 5.6843418860808E-14px)); 
+    @apply bg-default flex flex-col relative w-full p-3 h-full overflow-hidden;
   }
 }
 
