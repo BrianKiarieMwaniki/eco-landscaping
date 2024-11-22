@@ -19,6 +19,8 @@ const config: Config = {
         primary: "#003F2E",
         secondary: "#2D746D",
         accent: "#BCFF83",
+        darkGreen: "#00B67A",
+        lightGreen: "#92F231",
       },
     },
   },

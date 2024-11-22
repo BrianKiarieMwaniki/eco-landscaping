@@ -2,11 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply overflow-x-hidden overflow-y-hidden;
+  }
 
-@layer base{
-  body{
-    @apply bg-[#F5F6EF] relative !overflow-x-hidden after:absolute after:-top-[200px] after:-right-[200px] after:content-[''] after:h-[400px] after:w-[400px] after:-z-50 after:bg-gradient-radial 
-    after:from-accent/75 after:from-[42%] after:via-accent/15 after:via-70% after:to-white after:to-100% after:rounded-full after:blur-2xl
+  body {
+    @apply bg-[#F5F6EF] relative overflow-x-hidden overflow-y-auto;
+  }
+
+  body::after,
+  body::before {
+    @apply absolute -z-50 bg-gradient-radial content-[''] blur-2xl;
+  }
+
+  body::after {
+    @apply -top-[200px] -right-[200px]  h-[400px] w-[400px] from-darkGreen/55 from-[12%] via-lightGreen/55 via-70% to-white to-100%  rounded-bl-3xl;
+  }
+
+  body::before {
+    @apply -bottom-[145px] -left-[120px] h-[477px] w-[459px] from-darkGreen/45 from-30% via-lightGreen/50 via-30% to-white to-100% rounded-tr-2xl;
   }
 }
 
@@ -23,7 +38,7 @@
     @apply text-[16px] font-normal;
   }
 
-  .txt-accent{
+  .txt-accent {
     @apply text-[16px] font-semibold;
   }
 
@@ -60,37 +75,41 @@
   }
 }
 
-@layer components{
-  .navlink{
-    @apply transition-all relative hover:text-accent text-primary font-semibold text-[16px];
+@layer components {
+  .navlink {
+    @apply transition-all relative hover:text-darkGreen text-primary font-semibold text-[16px];
   }
 
-  .navlink.active{
-    @apply text-accent;
+  .navlink.active {
+    @apply text-darkGreen;
   }
 
-  .menu-icon{
-    @apply relative
+  .menu-icon {
+    @apply relative;
   }
-  .menu-icon, .menu-icon::after, .menu-icon::before{
-    @apply w-[2.2rem] h-[2px] bg-primary inline-block
+  .menu-icon,
+  .menu-icon::after,
+  .menu-icon::before {
+    @apply w-[2.2rem] h-[2px] bg-primary inline-block;
   }
 
-  .menu-icon::after, .menu-icon::before{
+  .menu-icon::after,
+  .menu-icon::before {
     @apply absolute left-0 transition-all duration-[0.2] content-[''];
-    
   }
 
-  .menu-icon::after{
-    @apply top-[8px]
+  .menu-icon::after {
+    @apply top-[8px];
   }
-  .menu-icon::before{
-    @apply -top-[8px]
-  }
-
-  .menu-icon.toggled{
-    @apply bg-transparent after:rotate-[135deg] after:top-0 before:-rotate-[135deg] before:top-0
+  .menu-icon::before {
+    @apply -top-[8px];
   }
 
-  
+  .menu-icon.toggled {
+    @apply bg-transparent after:rotate-[135deg] after:top-0 before:-rotate-[135deg] before:top-0;
+  }
+
+  .footer-navlink{
+    @apply text-[16px] font-normal transition-all duration-[0.2s] hover:font-semibold hover:text-darkGreen;
+  }
 }
