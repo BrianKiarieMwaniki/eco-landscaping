@@ -11,7 +11,7 @@ const Footer = () => {
             <span className="txt my-3 w-[230px] p-3 inline-block">
               Best Landscape Design & Maintenance services in the Columbus OH
             </span>
-            <div className="flex ">
+            <div className="flex gap-x-3">
               <svg className="h-[32px] w-[32px]">
                 <use xlinkHref="/icons/sprite.svg#facebook" />
               </svg>
@@ -22,21 +22,21 @@ const Footer = () => {
                 <use xlinkHref="/icons/sprite.svg#instagram" />
               </svg>
               <svg className="h-[32px] w-[32px]">
-                <use href="/icons/sprite.svg#youtube" />
+                <use xlinkHref="/icons/sprite.svg#youtube" />
               </svg>
             </div>
           </div>
-          <div className="lg:flex 2">
+          <div className="">
             <div>
               <h6 className="txt-accent uppercase">ADDRESS</h6>
-              <p className="txt mt-5">
+              <p className="txt mt-5 text-primary">
                 <span>Desa Bangsal Rt 11 Rw 02</span>
                 <br />
                 <span>Bangsal Mojokerto</span>
                 <br />
                 <span>Jawa timur Indonesia</span>
               </p>
-              <p className="mt-5">
+              <p className="mt-5 text-primary">
                 <span>Phone: +1 800 123 45 67</span>
                 <br />
                 <span>Email: email@example.com</span>
