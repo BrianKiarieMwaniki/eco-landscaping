@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 
 import Services from './components/pages/home/Services'
+import ChooseUs from './components/pages/home/ChooseUs'
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         />
       </section>
       <Services/>
+      <ChooseUs/>
     </main>
   )
 }

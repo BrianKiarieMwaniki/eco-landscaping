@@ -73,6 +73,10 @@
   .small-heading-regular {
     @apply text-[12px] font-normal;
   }
+
+  .left-skew{
+    @apply rounded-tl-[30px] rounded-br-[30px] rounded-tr-[200px] rounded-bl-[200px];
+  }
 }
 
 @layer components {
